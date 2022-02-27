@@ -1,0 +1,139 @@
+.search-container{
+    margin-top: 70px;
+    position: relative;
+    flex-direction: column;
+    height: 35px;
+    width: 100%;
+    overflow-y: visible;
+}
+
+.search-container input{
+    position: absolute;
+    width: 600px;
+    height: 97%;
+    padding: 4px 21px 4px 15px;
+    top: 50%;
+    left: 50%;
+    background-color: #1f1118;
+    color: white;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    outline: none;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px rgb(255, 255, 255,0.4);
+    z-index: 2;
+}
+
+
+.search-container ul{
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 101%;
+    left: 50%;
+    width: 570px;
+    max-height: 121px;
+    transform: translateX(-50%);
+    background: rgb(59, 57, 57);
+    color: white;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+.search-container li{
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.search-container li:hover{
+    background: rgb(105, 99, 99);
+}
+
+.search-container .search-btn{
+    position: absolute;
+    border: 2px solid black;
+}
+
+.animal-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 20px;
+    place-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+.animal-container .animal{
+    height: 370px;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg,rgb(113, 138, 45),rgb(111, 116, 128));
+    box-shadow: 0px 5px 10px rgb(255, 255, 255,0.25);
+    margin-bottom: 20px;
+}
+
+.animal-container .animal .animal-img{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.animal-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.animal .animal-name{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.animal .animal-info{
+    text-align: center;
+    margin-bottom: 5px;
+    height: 74px;
+    overflow-y: hidden;
+}
+
+.animal .animal-read-more{
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    /* border: 2px solid red; */
+}
+
+.animal-read-more a{
+    cursor: pointer;
+    border: none;
+    height: 35px;
+    width: 140px;
+    border-radius: 20px;
+    background: linear-gradient(90deg,rgb(58, 128, 58),rgb(56, 68, 92));
+    box-shadow: 2px 2px 10px rgb(255, 255, 255,0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animal-read-more a:hover{
+    color: rgb(159, 223, 223);
+}
+
+@media (max-width:650px) {
+    .search-container input{
+        width: 400px;
+    }
+    .search-container ul{
+        width: 370px;
+    }
+}

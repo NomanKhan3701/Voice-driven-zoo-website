@@ -1,0 +1,11 @@
+{
+  "name": "zoo-management",
+  "version": "1.0.0",
+  "description": "All the libararies used are available in this npm folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

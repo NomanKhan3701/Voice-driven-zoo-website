@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo-Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js">
+    </script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/voiceRecog.css">
+    <link rel="stylesheet" href="./css/map.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Zoo</h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="./videos/video.mp4" muted loop autoplay></video> 
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Welcome to <span>Zoo</span></h2>
+            <div class="type-container">
+                <h3>Explore</h3>
+                <h3 class="typing">the world</h3>
+            </div> 
+            <p>The Singapore Zoo (formerly known as the Singapore Zoological Gardens) was opened in 1973 with a modest collection of about 300 animals from some 70 species. Situated on the promontory of the Seletar Reservoir, the zoo adopts an “open concept” in which the animals are housed in open enclosures landscaped to resemble their natural habitats.</p>
+            <a href="animals.html">Explore</a>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="#map">Map</a></li>
+            <img src="" alt="">
+        </ul>
+    </div>
+
+    <div id="map-container">
+        <div id='map'></div>
+    </div>
+
+    <div class="short-route-container">
+        <h1>Popular animals</h1>
+        <h2 class="info">Select the animals you want to visit</h2>
+        <div class="choices">
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="0" disabled>
+                <label for="check">Zoo Entrance</label>
+            </div>
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="1">
+                <label for="check">Tiger</label>
+            </div>
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="2">
+                <label for="check">Elephant</label>
+            </div>
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="3">
+                <label for="check">Lions</label>
+            </div>
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="4">
+                <label for="check">Panda</label>
+            </div>
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="5">
+                <label for="check">Spider Monkey</label>
+            </div>
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="6">
+                <label for="check">Hippo</label>
+            </div>
+            <div class="anim-choice">
+                <input type="checkbox" name="check" index="7">
+                <label for="check">Chimpanzee</label>
+            </div>    
+        </div>
+        <div class="short-route-btn">Get shortest route</div>
+        <div class="minPath-list">
+        </div>
+    </div>
+
+    <div class="nav-voice">
+        <!-- <div class="chatbot-container">
+            <span><i class="fas fa-comment-alt fa-3x"></i></span>
+        </div> -->
+        <div class="user-voice-input"></div>
+        <div class="voice-command">
+            <span><i class="fas fa-microphone"></i></span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-up">
+            <div class="timings">
+                <h3>Opening hours</h3>
+                <p>8:30am-6:00pm(last entry at 5:00pm)</p>
+                <p>We're open every day of the year.</p>
+            </div>
+            <div class="address">
+                <h3>Address</h3>
+                <div>80 Mandai Lake Road Singapore 729826</div>
+            </div>
+            <div class="connect-us">
+                <h3>Stay Connected</h3>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div><span>© Copyright 2021</span>, Singapore Zoological Gardens. All Rights Reserved. Mandai Wildlife
+                Reserve, Mandai River Wonders, Singapore Zoo, Night Safari, Wildlife Reserves Singapore and Jurong Bird
+                Park are copyrighted by and/or trade marks of Singapore Zoological Gardens (and/or its affiliate(s)) in
+                Singapore and/or other countries, as the case may be.</div>
+        </div>
+        <div class="footer-down">
+            <div><span>Developed by : </span>Noman</div>
+        </div>
+    </div>
+
+
+</body>
+<script type="module" src="./js/voiceKey.js"></script>
+<script type="module" src="./js/voiceRecog.js"></script>
+<script type="module" src="./js/map.js"></script>
+<script src="./js/index.js"></script>
+</html>

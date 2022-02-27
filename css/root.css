@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 14px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(172, 180, 163);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(97, 156, 74),rgb(85, 177, 57),rgb(97, 141, 134));
+}
+
+body,html{
+    background-color: #1f1118;
+    min-height: calc(100vh);
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+}
